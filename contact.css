@@ -1,0 +1,365 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 0.9rem;
+}
+
+body{
+  background-color: rgb(10, 10, 10);
+    color: white;
+    height: 80vh;
+    min-height: 80vh;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+
+  }
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('Untitled design.png') repeat-x fixed center center/cover;
+    background-size: cover;
+
+    opacity: 0.3;
+    z-index: -1;
+}
+a{
+    color:white;
+    text-decoration: none;
+
+    
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1b1b1b;
+    width: 100%;
+}
+li #more{
+    margin-left: 10px;
+    margin-right: 0px;
+}
+.nav2 li{
+    display: inline-block;
+    padding: 20px 24px;
+    list-style: none;
+    transition: transfrom 0.6s;
+}
+.nav2 ul li a{
+  transform: scale(1);
+  transition: color 0.6s, transform 0.6s;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1rem;
+  text-decoration: none;
+
+}
+.nav2{
+    position: relative;
+
+}
+.nav1{
+    padding-left: 20px;
+
+}
+.nav2{
+    padding-right: 20px;
+}
+
+
+
+  .dropdown a:hover {
+    background-color: #666;
+    text-decoration: none;
+
+  }
+  .nav2 ul li:hover{
+    transform: scale(1.2);
+  }
+  .nav2 ul li:hover a{
+    color: #4C6A92;
+  }
+
+
+  .nav2 ul li:hover ul li a{
+    color: white;
+    transform: scale(1);
+  }
+
+
+
+  .nav1 ul li{
+    list-style: none;
+    padding: 5px 10px;
+  }
+  .nav1 ul li a{
+    font-family: "Boldonse", system-ui;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+
+  }
+  .nav1 span{
+    font-family: "Boldonse", system-ui;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.7rem;
+    color: white;  
+}
+.nav2 i{
+    margin-right: 10px;
+}
+#title{
+  font-weight: 1000;
+  margin: 0;
+  padding: 0;
+  font-size: 1.9rem;
+  color: #4C6A92;
+}
+
+
+/*  main section:   */
+
+
+main{
+    width: 100%;
+    height: 100%;
+
+}
+.container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: 100%;
+}
+.aboutcontact{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-evenly;
+    width: 100%;
+    
+}
+.title{
+    padding: 20px;
+    align-self: flex-start;
+}
+.title h1{
+    font-size: 2.5rem;
+    color: #fa9939;
+    text-shadow: 1px 1px 10px black;
+    margin-bottom: 16px;
+}
+.title h2{
+  font-size: 1.3rem;
+}
+.filieres{
+    margin-top: 20px;
+    width: 48%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.filiere1{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+  align-content: space-between;
+  background-color:#2d3238;
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    margin: 0px 0;
+    border-radius: 20px;
+    box-shadow: 0px 0px 4px 1px #4C6A92;
+    transition: box-shadow 0.6s;
+
+}
+.filiere1:hover{
+    box-shadow: 0px 0px 15px 4px #4C6A92;
+  }
+
+.filieres iframe{
+    box-shadow: 0px 0px 4px 1px #4C6A92;
+    transition: box-shadow 0.6s;
+}
+.filieres iframe:hover{
+    box-shadow: 0px 0px 15px 4px #4C6A92;
+  }
+
+.filiere1 h1{
+    margin-bottom: 20px;
+    font-size: 1.9rem;
+    color: #fa9939;
+    text-shadow: 1px 1px 5px black;
+}
+.filiere1 p{
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 5px black;
+
+}
+.filiere1 ul{
+    list-style: disc;
+    color: #fa9939;
+    padding-left: 30px;
+    text-shadow: 1px 1px 5px black;
+}
+.filiere1 li{
+    color: beige;
+    font-size: 1.3rem;
+}
+.filiere1 i{
+    padding: 0;
+    margin-right: 0;
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+#localisation{
+    height: 550px;
+}
+#localisation img{
+    height: 85%;
+    width: 80%;
+    border-radius: 12px;
+}
+#localisation div{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+#smalldiv{
+    margin-top: 40px;
+    height: 15vh;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#smalldiv h1{
+    margin: 0;
+    padding: 0;
+}
+#smalldiv a{    
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 1.9rem;
+    color: beige;    
+    text-decoration: none;
+    transition: color 0.6s, line-height 0.6s;
+}
+#smalldiv a i{
+    font-size: 1.7rem;
+    margin: 0px 5px;
+}
+
+#smalldiv:hover a{
+    color: #fa9939;
+    line-height: 25px;  
+}
+.filiere1 a{    
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 1.5rem;
+    color: beige;    
+    text-decoration: none;
+    transition: color 0.6s, line-height 0.6s;
+}
+iframe{
+    width: 100vh;
+    height: 100%;
+    border-radius: 12px;
+}
+.tele{
+    margin: 0;
+    padding: 0;
+    height: 60%;
+    border-bottom: 2px solid #fa9939;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+}
+.social{
+    margin: 0;
+    padding: 0;
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.cont{
+    height: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    background-color: #2d3238;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px 5px black;
+    width: 30%;
+}
+.social  i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    transition: box-shadow 0.6s, background-color 0.6s, color 0.6s;
+    cursor: pointer;
+    height: 6.5vh;
+    width: 6.5vh;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    margin-right: 10px;
+
+}
+.social a{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tele p span{
+    color: #fa9939;
+    font-size: 1.5rem;
+}
+.tele i{
+    color: #fa9939;
+    font-size: 1.5rem;
+
+}
+  .social i:hover{
+    box-shadow: 0px 0px 10px 7px  #fa9939;
+    background-color: white;
+    color: #181b1f;
+  }
