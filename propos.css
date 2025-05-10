@@ -21,11 +21,11 @@ body{
   }
   body::before {
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 270vh;
+    min-height: 100vh;
     background: url('Untitled design.png') repeat-x fixed center center/cover;
     background-size: cover;
 
@@ -177,24 +177,29 @@ main{
   flex-direction: column;
   justify-content: start;
   background-color:#2d3238;
-    width: 95%;
+    width: 93%;
     height: 36vh;
     padding: 20px;
     margin: 10px 0;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0px 0px 4px 1px #4C6A92;
-
     transition: box-shadow 0.6s;
-
 }
-
+.bigdiv{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  min-height: 40vh;
+  margin-bottom: 20px;
+}
 .filiere1:hover{
   box-shadow: 0px 0px 15px 4px #4C6A92;
 }
 
 .filiere1 h1{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 1.9rem;
     color: #fa9939;
     text-shadow: 1px 1px 5px black;
@@ -204,7 +209,8 @@ main{
   margin-bottom: 20px;
   font-size: 1.5rem;
   text-shadow: 1px 1px 5px black;
-
+  line-height: 27px;
+  font-weight: 400;
 }
 .filiere1 ul{
     list-style: disc;
@@ -216,23 +222,39 @@ main{
     color: beige;
     font-size: 1.3rem;
     background-color:#2d3238;
+    line-height: 27px;
+    font-weight: 350;
+}
+
+.bigdiv #nous{
+  width: 45%;
+  min-height: 50vh;
 
 }
-#localisation{
-    height: 550px;
+.bigdiv #mission{
+  width: 45%;
+  min-height: 50vh;
 }
-#localisation img{
-    height: 85%;
-    width: 80%;
-    border-radius: 12px;
+.bigdiv #ou{
+  width: 45%;
+  min-height: 50vh;
 }
-#localisation div{
-    display: flex;
-    align-items: start;
-    justify-content: center;
+.bigdiv #pourquoi{
+  width: 45%;
+  min-height: 50vh;
 }
+.bigdiv #pourquoi{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+}
+.bigdiv #pourquoi li{
+
+  line-height: 30px;
+}
+
 #smalldiv{
-    margin-top: 40px;
     height: 15vh;
     width: 30%;
     display: flex;

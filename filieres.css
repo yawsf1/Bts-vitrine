@@ -9,11 +9,13 @@
     font-style: normal;
     font-size: 0.9rem;
 }
+html{
+  scroll-behavior: smooth;
 
+}
 body{
   background-color: rgb(10, 10, 10);
     color: white;
-    height: 100vh;
     min-height: 100vh;
     width: 100%;
     position: relative;
@@ -22,11 +24,11 @@ body{
   }
   body::before {
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 115vh;
+    min-height: 100vh;
     background: url('Untitled design.png') repeat-x fixed center center/cover;
     background-size: cover;
 
@@ -36,6 +38,9 @@ body{
 a{
     color:white;
     
+}
+.more{
+  display: none;
 }
 header{
     display: flex;
@@ -112,6 +117,8 @@ li #more{
     font-style: normal;
     font-size: 1.7rem;
     color: white;  
+    display: inline-block;
+
 }
 .nav2 i{
     margin-right: 10px;
@@ -124,13 +131,12 @@ li #more{
   color: #4C6A92;
 }
 
-
 /*  main section:   */
 
 
 main{
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
 }
 .container{
     height: 100%;
@@ -138,7 +144,8 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    height: 100%;
+    height: 100vh;
+    min-height: 100vh;
 }
 .title{
     padding: 20px;
@@ -165,26 +172,37 @@ main{
 }
 .filieres1, .filieres2{
     width: 100%;
+    flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 .filiere1, .filiere2{
+  line-height: 40px;
   display: flex;
-  flex-direction: column;
-  justify-content: start;
+  justify-content: space-evenly;
   background-color:#2d3238;
   box-shadow: 0px 0px 4px 1px #4C6A92;
-  width: 48%;
-  height: 36vh;
+  width: 90%;
   padding: 15px;
   margin: 10px 0;
   border-radius: 20px;
   transition: box-shadow 0.6s;
 }
+
+
+.filname{
+  width: 70%;
+}
+.anima1{
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
 .filiere1:hover, .filiere2:hover{
   box-shadow: 0px 0px 15px 4px #4C6A92;
 }
+
 
 .filiere1 h1, .filiere2 h1{
     margin-bottom: 20px;
@@ -193,8 +211,678 @@ main{
     text-shadow: 1px 1px 5px black;
 }
 .filiere1 p, .filiere2 p{
+  padding: 0px 20px;
+  width: 90%;
+  font-weight: 400;
   margin-bottom: 20px;
   font-size: 1.3rem;
   text-shadow: 1px 1px 5px black;
+
+}
+
+
+@media (max-width: 1120px) {
+  
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1b1b1b;
+    width: 100%;
+}
+
+li #more{
+    margin-left: 10px;
+    margin-right: 0px;
+}
+.nav2 li{
+    display: inline-block;
+    padding: 20px 24px;
+    list-style: none;
+    transition: transfrom 0.6s;
+}
+.nav2 ul li a{
+  transform: scale(1);
+  transition: color 0.6s, transform 0.6s;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1rem;
+}
+.nav1{
+    padding-left: 15px;
+    width: 20%;
+
+}
+.nav2{
+  position: relative;
+  padding-right: 10px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+
+
+  .dropdown a:hover {
+    background-color: #666;
+  }
+  .nav2 ul li:hover{
+    transform: scale(1.2);
+  }
+  .nav2 ul li:hover a{
+    color: #4C6A92;
+  }
+
+
+  .nav2 ul li:hover ul li a{
+    color: white;
+    transform: scale(1);
+  }
+
+
+
+  .nav1 ul li{
+    list-style: none;
+    padding: 5px 5px;
+
+  }
+  .nav1 ul li a{
+    font-family: "Boldonse", system-ui;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: white;
+  }
+  .nav1 span{
+    font-family: "Boldonse", system-ui;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.7rem;
+    color: white;
+    display: inline-block;
+  
+}
+.nav2 i{
+    margin-right: 8px;
+}
+#title{
+  font-weight: 1000;
+  margin: 0;
+  padding: 0;
+  font-size: 1.9rem;
+  color: #4C6A92;
+}
+
+
+
+main{
+  width: 100%;
+  min-height: 100vh;
+}
+.container{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  min-height: 100vh;
+}
+.title{
+  padding: 20px;
+  align-self: flex-start;
+}
+.title h1{
+  font-size: 2.3rem;
+  color: #fa9939;
+  text-shadow: 1px 1px 10px black;
+  margin-bottom: 16px;
+
+}
+
+.title h2{
+font-size: 1.3rem;
+}
+.filieres{
+margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.filieres1, .filieres2{
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.filiere1, .filiere2{
+line-height: 40px;
+display: flex;
+justify-content: space-evenly;
+background-color:#2d3238;
+box-shadow: 0px 0px 4px 1px #4C6A92;
+width: 95%;
+padding: 15px;
+margin: 10px 0;
+border-radius: 20px;
+transition: box-shadow 0.6s;
+}
+
+
+.filname{
+width: 70%;
+}
+.anima1{
+width: 30%;
+display: flex;
+align-items: center;
+}
+.filiere1:hover, .filiere2:hover{
+box-shadow: 0px 0px 15px 4px #4C6A92;
+}
+
+
+.filiere1 h1, .filiere2 h1{
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #fa9939;
+  text-shadow: 1px 1px 5px black;
+}
+.filiere1 p, .filiere2 p{
+padding: 0px 20px;
+width: 100%;
+font-weight: 400;
+margin-bottom: 20px;
+font-size: 1.3rem;
+text-shadow: 1px 1px 5px black;
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 923px) {
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1b1b1b;
+    width: 100%;
+    height: 8vh;
+}
+
+li #more{
+    margin-left: 10px;
+    margin-right: 0px;
+}
+.nav2 li{
+    display: inline-block;
+    padding: 15px 15px;
+    list-style: none;
+    transition: transfrom 0.6s;
+}
+.nav2 ul li a{
+  transform: scale(1);
+  transition: color 0.6s, transform 0.6s;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1rem;
+}
+.nav1{
+    padding-left: 15px;
+    width: 40%;
+
+}
+.nav2{
+  position: relative;
+  padding-right: 10px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+
+
+  .dropdown a:hover {
+    background-color: #666;
+  }
+  .nav2 ul li:hover{
+    transform: scale(1.2);
+  }
+  .nav2 ul li:hover a{
+    color: #4C6A92;
+  }
+
+
+  .nav2 ul li:hover ul li a{
+    color: white;
+    transform: scale(1);
+  }
+
+
+
+  .nav1 ul li{
+    list-style: none;
+    padding: 5px 5px;
+  }
+  .nav1 ul li a{
+    font-family: "Boldonse", system-ui;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.2rem;
+    color: white;
+  }
+  .nav1 span{
+    font-family: "Boldonse", system-ui;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.2rem;
+    color: white;  
+    display: inline-block;
+}
+.nav2 i{
+    margin-right: 8px;
+}
+#title{
+  font-weight: 1000;
+  margin: 0;
+  padding: 0;
+  font-size: 1.9rem;
+  color: #4C6A92;
+}
+#accnav{
+  display: none;
+
+}
+
+
+main{
+  width: 100%;
+  min-height: 100vh;
+}
+.container{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  min-height: 100vh;
+}
+.title{
+  padding: 20px;
+  align-self: flex-start;
+}
+.title h1{
+  font-size: 2.1rem;
+  color: #fa9939;
+  text-shadow: 1px 1px 10px black;
+  margin-bottom: 16px;
+
+}
+
+.title h2{
+font-size: 1.1rem;
+}
+.filieres{
+margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.filieres1, .filieres2{
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.filiere1, .filiere2{
+line-height: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color:#2d3238;
+box-shadow: 0px 0px 4px 1px #4C6A92;
+width: 95%;
+padding: 15px;
+margin: 20px 0;
+border-radius: 20px;
+transition: box-shadow 0.6s;
+position: relative;
+}
+
+
+.filname{
+width: 95%;
+}
+.anima1{
+position: absolute;
+top: 50%;
+left: 50%;
+translate: -50% -50%;
+z-index: 3;
+opacity: 0.2;
+filter: blur(0.1rem);
+}
+.filiere1:hover, .filiere2:hover{
+box-shadow: 0px 0px 15px 4px #4C6A92;
+}
+
+
+.filiere1 h1, .filiere2 h1{
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #fa9939;
+  text-shadow: 1px 1px 5px black;
+}
+.filiere1 p, .filiere2 p{
+padding: 0px 20px;
+width: 100%;
+font-weight: 400;
+margin-bottom: 20px;
+font-size: 1.3rem;
+text-shadow: 1px 1px 5px black;
+
+}
+}
+
+@media (max-width: 696px){
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1b1b1b;
+    width: 100%;
+    height: 8vh;
+}
+.more{
+  display: flex;
+  margin-right: 15px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.more i{
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.more .dropdown {
+  display: none;
+  position: absolute;
+  top: 80%;
+  right: 0;
+  background-color: #1b1b1b;
+  min-width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.more:hover .dropdown {
+  display: block;
+}
+
+.dropdown a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.dropdown a:hover {
+  background-color: #4C6A92;
+}
+
+.nav2{
+  position: relative;
+  padding-right: 10px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  display: none;
+}
+.more i:hover .nav2 {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    padding-right: 10px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+li #more{
+    margin-left: 10px;
+    margin-right: 0px;
+}
+.nav2 li{
+    display: inline-block;
+    padding: 15px 1px;
+    list-style: none;
+    transition: transfrom 0.6s;
+}
+.nav2 ul li a{
+  transform: scale(1);
+  transition: color 0.6s, transform 0.6s;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1rem;
+}
+.nav1{
+    padding-left: 15px;
+    width: 50%;
+}
+
+
+
+
+  .dropdown a:hover {
+    background-color: #666;
+  }
+  .nav2 ul li:hover{
+    transform: scale(1.2);
+  }
+  .nav2 ul li:hover a{
+    color: #4C6A92;
+  }
+
+
+  .nav2 ul li:hover ul li a{
+    color: white;
+    transform: scale(1);
+  }
+
+
+
+  .nav1 ul li{
+    list-style: none;
+    padding: 5px 10px;
+  }
+  .nav1 ul li a{
+    font-family: "Boldonse", system-ui;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.2rem;
+    color: white;
+  }
+  .nav1 span{
+    font-family: "Boldonse", system-ui;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.2rem;
+    color: white;  
+    display: inline-block;
+}
+.nav2 i{
+    margin-right: 8px;
+}
+#title{
+  font-weight: 1000;
+  margin: 0;
+  padding: 0;
+  font-size: 1.9rem;
+  color: #4C6A92;
+}
+body{
+  background-color: rgb(10, 10, 10);
+    color: white;
+    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background: url('Untitled design.png') repeat-x fixed center center/cover;
+    background-size: cover;
+
+    opacity: 0.3;
+    z-index: -1;
+}
+
+main{
+  width: 100%;
+  height: 100vh;
+}
+.container{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+.title{
+  padding: 20px;
+  align-self: flex-start;
+}
+.title h1{
+  font-size: 1.8rem;
+  color: #fa9939;
+  text-shadow: 1px 1px 10px black;
+  margin-bottom: 16px;
+
+}
+
+.title h2{
+font-size: 1rem;
+}
+.filieres{
+margin-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.filieres1, .filieres2{
+  width: 95%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.filiere1, .filiere2{
+  height: 220px;
+  overflow-y: scroll;
+line-height: 40px;
+display: flex;
+justify-content: center;
+align-items: start;
+background-color:#2d3238;
+box-shadow: 0px 0px 4px 1px #4C6A92;
+width: 95%;
+padding: 0px;
+padding-top: 0;
+margin: 20px 0;
+border-radius: 20px;
+transition: box-shadow 0.6s;
+position: relative;
+}
+
+
+.filname{
+width: 100%;
+
+}
+.anima1{
+position: absolute;
+width: 250px;
+height: 250px;
+top: 50%;
+left: 50%;
+translate: -50% -50%;
+opacity: 0.2;
+filter: blur(0.1rem);
+display: none;
+}
+.filiere1:hover, .filiere2:hover{
+box-shadow: 0px 0px 15px 4px #4C6A92;
+}
+
+
+.filiere1 h1, .filiere2 h1{
+  line-height: 30px;
+  position: sticky;
+  top: 0;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #fa9939;
+  background-color: #060607;
+  text-shadow: 1px 1px 5px black;
+  z-index: 30;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:#2d3238;
+}
+.filiere1 p, .filiere2 p{
+padding: 5px 20px;
+width: 100%;
+font-weight: 400;
+margin-bottom: 20px;
+font-size: 1rem;
+text-shadow: 1px 1px 5px black;
+position: relative;
+line-height: 30px;
+}
+
 
 }
