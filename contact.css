@@ -53,7 +53,9 @@ li #more{
     display: inline-block;
     padding: 20px 24px;
     list-style: none;
-    transition: transfrom 0.6s;
+    transition: transform 0.6s;
+            cursor: pointer;
+
 }
 .nav2 ul li a{
   transform: scale(1);
@@ -103,6 +105,8 @@ li #more{
   .nav1 ul li{
     list-style: none;
     padding: 5px 10px;
+            cursor: pointer;
+
   }
   .nav1 ul li a{
     font-family: "Boldonse", system-ui;
@@ -171,27 +175,26 @@ main{
 }
 .filieres{
     margin-top: 20px;
-    width: 48%;
-    height: 300px;
+    width: 45%;
+    height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    
 }
 
+
 .filiere1{
+    align-self: flex-start;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content:center;
   align-items: center;
-  justify-items: center;
-  align-content: space-between;
   background-color:#2d3238;
     width: 100%;
     height: 300px;
     padding: 20px;
-    margin: 0px 0;
+    margin: 0px 0px;
     border-radius: 20px;
     box-shadow: 0px 0px 4px 1px #4C6A92;
     transition: box-shadow 0.6s;
@@ -288,11 +291,7 @@ main{
     text-decoration: none;
     transition: color 0.6s, line-height 0.6s;
 }
-iframe{
-    width: 100vh;
-    height: 100%;
-    border-radius: 12px;
-}
+
 .tele{
     margin: 0;
     padding: 0;
@@ -308,8 +307,8 @@ iframe{
 .social{
     margin: 0;
     padding: 0;
-    height: 40%;
-    width: 100%;
+    height: 30%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -326,7 +325,12 @@ iframe{
     background-color: #2d3238;
     border-radius: 20px;
     box-shadow: 1px 1px 10px 5px black;
-    width: 30%;
+    width: 70%;
+}
+.social a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .social  i{
     display: flex;
@@ -336,19 +340,14 @@ iframe{
     padding: 0;
     transition: box-shadow 0.6s, background-color 0.6s, color 0.6s;
     cursor: pointer;
-    height: 6.5vh;
-    width: 6.5vh;
+    height: 6vh;
+    width: 6vh;
     font-size: 1.5rem;
     border-radius: 50%;
     margin-right: 10px;
 
 }
-.social a{
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 .tele p span{
     color: #fa9939;
     font-size: 1.5rem;
@@ -363,3 +362,55 @@ iframe{
     background-color: white;
     color: #181b1f;
   }
+  #comments{
+    margin-top: 20px;
+    width: 50%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    height: 400px;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content:space-evenly;
+    padding: 20px 20px;
+    border-left: 2px solid #4C6A92;
+}
+form input, form textarea{
+    width: 95%;
+    margin: 0;
+}
+form input {
+    padding: 15px 0px;
+    padding-left: 10px;
+    border-radius: 12px ;
+    border: 0.5px solid black;
+}
+form textarea{
+    justify-self: self-end;
+    height: 200px;
+        padding: 15px 0px;
+
+    padding-left: 10px;
+    border-radius: 12px ;
+    border: 0.5px solid black;
+}
+form button{
+    margin: auto;
+    width: 25%;
+    padding: 10px 0px;
+    border-radius: 12px ;
+    border: 0.5px solid black;
+    background-color: #4C6A92;
+    transition: background-color 0.6s, color 0.6s;
+    cursor : pointer;
+}
+form button:hover{
+    background-color: #2d3238;
+    color : #fa9939
+}

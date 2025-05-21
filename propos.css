@@ -53,7 +53,9 @@ li #more{
     display: inline-block;
     padding: 20px 24px;
     list-style: none;
-    transition: transfrom 0.6s;
+    transition: transform 0.6s;
+            cursor: pointer;
+
 }
 .nav2 ul li a{
   transform: scale(1);
@@ -103,6 +105,8 @@ li #more{
   .nav1 ul li{
     list-style: none;
     padding: 5px 10px;
+            cursor: pointer;
+
   }
   .nav1 ul li a{
     font-family: "Boldonse", system-ui;
@@ -243,12 +247,29 @@ main{
   width: 45%;
   min-height: 50vh;
 }
-.bigdiv #pourquoi{
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: space-around;
+.bigdiv #maps{
+    width: 65%;
+  min-height: 60vh;
+
 }
+#maps h1{
+    margin: 0px 0px 20px 10px ;
+    font-size: 1.9rem;
+    color: #fa9939;
+    text-shadow: 1px 1px 5px black;
+}
+.bigdiv #contactme{
+    padding: 0;
+    width: 20%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 40px;
+    align-self: self-start;
+}
+
+
 .bigdiv #pourquoi li{
 
   line-height: 30px;
@@ -283,3 +304,33 @@ main{
     color: #fa9939;
     line-height: 25px;  
 }
+iframe{
+    width: 100%;
+    height: 100vh;
+    border-radius: 12px;
+}
+#contactme h1{
+    margin-bottom: 10px;
+    color: #fa9939;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    
+  }
+  #contactme a{
+    margin-bottom: 10px;
+    color: #fa9939;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+
+  #more{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }

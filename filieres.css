@@ -57,7 +57,8 @@ li #more{
     display: inline-block;
     padding: 20px 24px;
     list-style: none;
-    transition: transfrom 0.6s;
+    transition: transform 0.6s;
+    cursor: pointer;
 }
 .nav2 ul li a{
   transform: scale(1);
@@ -103,6 +104,8 @@ li #more{
   .nav1 ul li{
     list-style: none;
     padding: 5px 10px;
+        cursor: pointer;
+
   }
   .nav1 ul li a{
     font-family: "Boldonse", system-ui;
@@ -190,17 +193,20 @@ main{
   transition: box-shadow 0.6s;
 }
 
-
 .filname{
   width: 70%;
 }
 .anima1{
+  transition: scale 0.6s;
   width: 30%;
   display: flex;
   align-items: center;
 }
 .filiere1:hover, .filiere2:hover{
   box-shadow: 0px 0px 15px 4px #4C6A92;
+}
+.filiere1:hover .anima1, .filiere2:hover .anima1{
+    scale: 1.1;
 }
 
 
@@ -239,7 +245,7 @@ li #more{
     display: inline-block;
     padding: 20px 24px;
     list-style: none;
-    transition: transfrom 0.6s;
+    transition: transform 0.6s;
 }
 .nav2 ul li a{
   transform: scale(1);
@@ -432,7 +438,7 @@ li #more{
     display: inline-block;
     padding: 15px 15px;
     list-style: none;
-    transition: transfrom 0.6s;
+    transition: transform 0.6s;
 }
 .nav2 ul li a{
   transform: scale(1);
